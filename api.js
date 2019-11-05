@@ -16,9 +16,9 @@ module.exports = class API{
             data : data,
             method: reqObject.method.toLowerCase(),
         }
-
+        options.headers['Host'] = this.host.replace('http://','').replace('https://','').split(':')[0];
         return await new Promise((resolve, reject)=>{
-            axios(options).then(res => resolve(res.data)).catch(err => console.log(err.response));
+            axios(options).then(res => resolve(res.data)).catch(err => console.log(err));
         })
     }
 }
