@@ -18,7 +18,7 @@ module.exports = class API{
         }
         options.headers['Host'] = this.host.replace('http://','').replace('https://','').split(':')[0];
         return await new Promise((resolve, reject)=>{
-            axios(options).then(res => resolve(res.data)).catch(err => console.log(err));
+            axios(options).then(res => resolve(res.data)).catch(err => reject(err));
         })
     }
 }

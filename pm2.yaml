@@ -1,0 +1,5 @@
+apps:
+  - script: ./index.js
+    instances: 2
+    exec_mode: cluster
+    args : "--port 8888 --host \"https://r.tescolotus.com\""
