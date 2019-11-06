@@ -14,7 +14,10 @@ process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
 
 app.use(bodyParser.json())
 app.use(async (req, res, next) => {
-    api.call(req, req.body).then(result =>res.send(result)).catch(err => res.send(err));
+    api.call(req, req.body).then(result =>res.send(result)).catch(err => 
+        {
+            res.status(err.status).send(err);
+        });
     
 });
 

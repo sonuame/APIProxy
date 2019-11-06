@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index --port 8888 --host \"https://localhost:4000\"",
+    "start": "nodemon index --port 8888 --host \"https://r.tescolotus.com\"",
     "cluster": "npx pm2 start pm2.yaml"
   },
   "repository": {
