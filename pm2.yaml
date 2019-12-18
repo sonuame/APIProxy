@@ -1,5 +1,13 @@
 apps:
   - script: ./index.js
-    instances: 2
+    name : login-proxy
+    instances: 1
     exec_mode: cluster
-    args : "--port 8888 --host \"https://r.tescolotus.com\""
+    watch: true
+    args : "--port 7777 --host \"https://r.tescolotus.com\""
+  - script: ./index.js
+    name : grocery-proxy
+    instances: 1
+    exec_mode: cluster
+    watch: true
+    args : "--port 8888 --host \"https://s.tescolotus.com\""

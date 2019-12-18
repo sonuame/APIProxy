@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index --port 8888 --host \"https://r.tescolotus.com\"",
-    "cluster": "npx pm2 start pm2.yaml"
+    "start:login": "nodemon index --port 8888 --host \"https://r.tescolotus.com\"",
+	"start:grocery": "nodemon index --port 9999 --host \"https://s.tescolotus.com\"",
+    "cluster": "npx pm2 delete all & npx pm2 start pm2.yaml"
   },
   "repository": {
     "type": "git",

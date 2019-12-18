@@ -21,5 +21,6 @@ app.use(async (req, res, next) => {
     
 });
 
+
 const server = http.createServer(app);
 server.listen(port, () => console.log(`Proxy successfully started at http://${ip.address()}:${port} to forward requests to ${host}`))
