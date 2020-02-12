@@ -1,13 +1,66 @@
 apps:
   - script: ./index.js
-    name : login-proxy
+    name : login-proxy-TH-2222
     instances: 1
     exec_mode: cluster
-    watch: true
-    args : "--port 7777 --host \"https://r.tescolotus.com\""
+    args : "--port 2222 --host \"https://r.tescolotus.com\""
   - script: ./index.js
-    name : grocery-proxy
+    name : grocery-proxy-TH-2223
     instances: 1
     exec_mode: cluster
-    watch: true
-    args : "--port 8888 --host \"https://s.tescolotus.com\""
+    args : "--port 2223 --host \"https://s.tescolotus.com\""
+  - script: ./index.js
+    name : login-proxy-MY-3333
+    instances: 1
+    exec_mode: cluster
+    args : "--port 3333 --host \"https://r.tesco.com.my\""
+  - script: ./index.js
+    name : grocery-proxy-MY-3334
+    instances: 1
+    exec_mode: cluster
+    args : "--port 3334 --host \"https://s.tesco.com.my\""
+  - script: ./index.js
+    name : login-proxy-CZ-4444
+    instances: 1
+    exec_mode: cluster
+    args : "--port 4444 --host \"https://prihlaseni.itesco.cz\""
+  - script: ./index.js
+    name : grocery-proxy-CZ-4445
+    instances: 1
+    exec_mode: cluster
+    args : "--port 4445 --host \"https://zabezpeceni.itesco.cz\""
+  - script: ./index.js
+    name : login-proxy-PL-5555
+    instances: 1
+    exec_mode: cluster
+    args : "--port 5555 --host \"https://r.tesco.pl\""
+  - script: ./index.js
+    name : grocery-proxy-PL-5556
+    instances: 1
+    exec_mode: cluster
+    args : "--port 5556 --host \"https://s.tesco.pl\""
+  - script: ./index.js
+    name : login-proxy-HU-6666
+    instances: 1
+    exec_mode: cluster
+    args : "--port 6666 --host \"https://r.tesco.hu\""
+  - script: ./index.js
+    name : grocery-proxy-HU-6667
+    instances: 1
+    exec_mode: cluster
+    args : "--port 6667 --host \"https://s.tesco.hu\""
+  - script: ./index.js
+    name : login-proxy-SK-7777
+    instances: 1
+    exec_mode: cluster
+    args : "--port 7777 --host \"https://r.itesco.sk\""
+  - script: ./index.js
+    name : grocery-proxy-SK-7778
+    instances: 1
+    exec_mode: cluster
+    args : "--port 7778 --host \"https://s.itesco.sk\""
+  - script: ./index.js
+    name : grocery-website-TH-1111
+    instances: 1
+    exec_mode: cluster
+    args : "--port 1111 --host \"https://qa-th.ppe1.ngbeta.net\groceries\en-GB\""
